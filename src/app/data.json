@@ -1,0 +1,29 @@
+[
+  {
+    "nombres": "Andres Felipe",
+    "apellidos": "Garcia Castro",
+    "id": "1039248321",
+    "rol": "Administrador",
+    "estado": 1,
+    "telefono": "3137482312",
+    "correo": "andres@olsoftware.com"
+  },
+  {
+    "nombres": "Johan Sebastian",
+    "apellidos": "Betancourth Galindo",
+    "id": "1006166222",
+    "rol": "Coordinador",
+    "estado": 1,
+    "telefono": "3174862883",
+    "correo": "sebas.betan22@gmail.com"
+  },
+  {
+    "nombres": "Juan Camilo",
+    "apellidos": "Perez Loaiza",
+    "id": "99305321",
+    "rol": "Conductor",
+    "estado": 2,
+    "telefono": "3920341",
+    "correo": "juan.camilo@gmail.com"
+  }
+]

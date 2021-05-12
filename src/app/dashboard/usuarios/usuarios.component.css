@@ -1,0 +1,151 @@
+.menu {
+  background-color: #fff;
+  padding: 19px 27px;
+  width: 100%;
+}
+
+.filtro {
+  background-color: #fff;
+  padding: 19px 27px;
+  margin-left: 15px;
+  font-size: 9.5px;
+  color: #8b8b8b;
+}
+
+.menu, .filtro {
+  height: 82.5vh;
+}
+
+.contenedor {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 7.5fr 2fr;
+  place-items: center;
+}
+
+.menu, .filtro h6 {
+  color: #005cbf;
+}
+
+.menu .btn-crear {
+  background-color: #005cbf;
+  color: #fff;
+  font-size: 13px;
+}
+
+.menu table {
+  font-size: 13px;
+}
+
+.menu th {
+  color: #6a6a6a;
+  border-bottom: 2px solid #dbdbdb;
+}
+
+.menu td {
+  color: #8b8b8b;
+}
+
+.paginacion {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.paginacion mat-icon {
+  font-size: 19px;
+}
+
+ul.paginacion li {
+  display: inline;
+}
+
+ul.paginacion li a {
+  float: left;
+  padding: 0;
+  text-decoration: none;
+  color: #8b8b8b;
+}
+
+ul.paginacion .paginas a {
+  float: left;
+  padding: 0px 5px;
+  text-decoration: none;
+}
+
+ul.paginacion .paginas a.active {
+  float: left;
+  padding: 0px 4px;
+  text-decoration: none;
+  border-bottom: 2px solid #005cbf;
+  color: black;
+}
+
+ul.paginacion li a:hover {
+  border-bottom: 2px solid #4089f1;
+}
+
+
+.filtro input, select, option {
+  padding: 0px;
+}
+
+.filtro .btn-guardar, .btn-cancelar {
+  font-size: 10px;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-header, .modal-footer {
+  border: 0;
+}
+
+.modal-body * {
+  font-size: 13px;
+  color: #6a6a6a;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+.modal-footer * {
+  font-size: 13px;
+}
+
+.btn-accion {
+  padding: 2%;
+}
+
+.btn-accion mat-icon {
+  font-size: 20px;
+}
+
+#btnEdit mat-icon {
+  color: #005cbf;
+}
+
+#btnDelete mat-icon {
+  color: #6a6a6a;
+}
+
+.btn-close {
+  filter: invert(20%) sepia(100%) saturate(4000%);
+}
+
+.btn-guardar, .btn-cancelar:hover {
+  background: linear-gradient(90deg, #99c95c, #649b21);
+  color: #fff;
+}
+
+.btn-cancelar {
+  border: 1px solid #649b21;
+  color: #649b21;
+}
+
+.btn-guardar:hover {
+  background: linear-gradient(270deg, #99c95c, #649b21);
+}

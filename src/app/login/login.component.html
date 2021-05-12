@@ -1,0 +1,61 @@
+<!--Pantalla de espera-->
+<div *ngIf="loading" class="loading text-center">
+  <div class="content">
+    <h2>Estamos preparando todo para tí</h2>
+    <div class="loader">
+    </div>
+  </div>
+</div>
+
+<div class="loginPage">
+
+  <!--Imagen de fondo-->
+  <div class="loginImagen"></div>
+
+  <!--INICIA LOGIN-->
+  <div class="container loginContainer">
+    <div class="textos">
+      <h3>Aplicación</h3>
+      <h3>OLSoftware</h3>
+      <p class="mt-4">Prueba práctica Front-end senior</p>
+    </div>
+
+    <div class="formulario">
+      <div class="row">
+
+        <div class="col-lg-12">
+          <div id="ui">
+            <div class="row text-center">
+              <h4>Inicio de sesión</h4>
+            </div>
+
+            <div class="row grupoInputs">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Usuario" />
+                <span class="input-group-text"><mat-icon>person_outline</mat-icon></span>
+              </div>
+            </div>
+            <div class="row grupoInputs">
+              <div class="input-group">
+                <input type="password" class="form-control" placeholder="Contraseña" />
+                <span class="input-group-text"><mat-icon>lock_outline</mat-icon></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <button type="button" id="btnLogin" class="btn" (click)="iniciarSesion()">Iniciar sesión</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!--TERMINA LOGIN-->
+
+  <footer class="fixed-bottom text-center py-4">
+    <small>OLSoftware - 2018</small>
+  </footer>
+
+</div>

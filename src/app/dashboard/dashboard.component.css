@@ -1,0 +1,6 @@
+#main {
+  padding: 0px 16px 16px 16px;
+  transition: margin-left 0.5s;
+  min-height: 100vh;
+  background-color: #efefef;
+}

@@ -1,0 +1,207 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar nuevo usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg"></div>
+          <div class="col-lg-10">
+            <div id="ui">
+
+              <div class="row mb-4">
+                <div class="col-lg-6">
+                  <label class="form-label">Nombres</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="col-lg-6">
+                  <label class="form-label">Apellidos</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-lg-6">
+                  <label class="form-label">Identificación (C.C)</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="col-lg-6">
+                  <label class="form-label">Rol asociado</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-lg-6">
+                  <label class="form-label">Estado</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="col-lg-6">
+                  <label class="form-label">Contraseña</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <label class="form-label">Teléfono</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="col-lg-6">
+                  <label class="form-label">Correo electrónico</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg"></div>
+        </div>
+      </div>
+      <div class="modal-footer py-4">
+        <button type="button" class="btn btn-guardar px-4 mx-3">Aceptar</button>
+        <button type="button" class="btn btn-cancelar px-4 mx-3" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contenedor">
+  <div class="menu">
+    <div class="row align-items-center">
+      <div class="col">
+
+        <h6 class="float-start"><mat-icon>people_alt</mat-icon>&nbsp; Usuarios existentes</h6>
+        <button type="button" class="btn btn-crear px-4 float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Crear
+        </button>
+
+      </div>
+    </div>
+
+    <table class="table mt-4">
+      <thead>
+      <tr>
+        <th scope="col" class="col-sm-1">Nombres</th>
+        <th scope="col" class="col-sm-1">Apellidos</th>
+        <th scope="col" class="col-sm-1">Identificación (C.C)</th>
+        <th scope="col" class="col-sm-1">Rol asociado</th>
+        <th scope="col" class="col-sm-1">Estado</th>
+        <th scope="col" class="col-sm-1">Teléfono</th>
+        <th scope="col" class="col-sm-1">Correo electrónico</th>
+        <th scope="col" class="col-sm-1">Acción</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let usuario of Usuarios">
+        <td>{{ usuario.nombres }}</td>
+        <td>{{ usuario.apellidos }}</td>
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.rol }}</td>
+        <td *ngIf="usuario.estado==1; else inactivo">Activo</td>
+        <ng-template #inactivo><td>Inactivo</td></ng-template>
+        <td>{{ usuario.telefono }}</td>
+        <td>{{ usuario.correo }}</td>
+        <td>
+          <button id="btnEdit" type="button" class="btn btn-accion"><mat-icon>edit</mat-icon></button>
+          <button id="btnDelete" type="button" class="btn btn-accion"><mat-icon>delete</mat-icon></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <ul class="paginacion float-end">
+      <li>
+        <a href="#">
+          <mat-icon>first_page</mat-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </a>
+      </li>
+      <li class="paginas"><a class="active" href="#">1</a></li>
+      <li class="paginas"><a href="#">2</a></li>
+      <li class="paginas"><a href="#">3</a></li>
+      <li class="paginas"><a href="#">4</a></li>
+      <li class="paginas"><a href="#">5</a></li>
+      <li>
+        <a href="#">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon>last_page</mat-icon>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="filtro">
+    <div class="row">
+      <h6 class="float-start mb-2"><mat-icon>person_add</mat-icon>&nbsp; Filtrar búsqueda</h6>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Nombres</label>
+      <input type="text" class="form-control mb-2"/>
+
+      <label class="form-label">Apellidos</label>
+      <input type="text" class="form-control mb-2"/>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Identificación (C.C)</label>
+      <input type="text" class="form-control mb-2"/>
+
+      <label class="form-label">Rol asociado</label>
+      <select class="form-select mb-2">
+        <option selected></option>
+        <option value="1">Administrador</option>
+        <option value="2">Conductor</option>
+        <option value="3">Recolector</option>
+        <option value="4">Coordinador</option>
+        <option value="3">Digitador CG-UNO</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Estado</label>
+      <select class="form-select mb-2">
+        <option selected></option>
+        <option value="1">Activo</option>
+        <option value="2">Inactivo</option>
+      </select>
+
+      <label class="form-label">Contraseña</label>
+      <input type="text" class="form-control mb-2"/>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Teléfono</label>
+      <input type="text" class="form-control mb-2"/>
+
+      <label class="form-label">Correo electrónico</label>
+      <input type="text" class="form-control mb-2"/>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-6">
+        <button type="button" class="btn btn-guardar mt-1 px-4">Filtrar</button>
+      </div>
+      <div class="col-sm-6">
+        <button type="button" class="btn btn-cancelar px-4">Limpiar</button>
+      </div>
+    </div>
+
+  </div>
+</div>

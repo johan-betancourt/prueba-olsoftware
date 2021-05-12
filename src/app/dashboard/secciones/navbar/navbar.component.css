@@ -1,0 +1,21 @@
+mat-icon {
+  color: #005cbf;
+}
+
+.row {
+  font-size: 20px;
+  background-color: #fff;
+  padding: 6px 0px;
+  color: #005cbf;
+  margin-bottom: 13px;
+}
+
+.row img {
+  width: 30px;
+  height: 30px;
+}
+
+.row .name {
+  color: black;
+  font-size: 13px;
+}

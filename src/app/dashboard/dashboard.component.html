@@ -1,0 +1,9 @@
+<app-slidemenu [width]="sidebar"></app-slidemenu>
+
+<!--INICIA DASHBOARD-->
+<div id="main" [ngStyle]="{'margin-left.px': sidebar}">
+  <app-navbar (widthSidebar)="sidebar = $event"></app-navbar>
+  <router-outlet></router-outlet>
+  <app-footer alineacion="right"></app-footer>
+</div>
+<!--TERMINA DASHBOARD-->
