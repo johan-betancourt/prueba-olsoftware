@@ -25,5 +25,14 @@
     "estado": 2,
     "telefono": "3920341",
     "correo": "juan.camilo@gmail.com"
+  },
+    {
+    "nombres": "Juan Camilo",
+    "apellidos": "Perez Loaiza",
+    "id": "99305321",
+    "rol": "Conductor",
+    "estado": 2,
+    "telefono": "3920341",
+    "correo": "juan.camilo@gmail.com"
   }
 ]
